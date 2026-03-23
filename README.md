@@ -47,20 +47,16 @@ Conforme as diretrizes da disciplina, o projeto está organizado da seguinte for
 ## 🔄 Planejamento de Tarefas
 
 ### 1. Tratamento e Limpeza (ETL)
-**Responsáveis:** João Marcos e Cecília
 * Filtragem de dados por competência (ano/mês).
 * Padronização de nomes de municípios e estados.
 
 ### 2. Análise Exploratória
-**Responsáveis:** Victor Hugo e Fernando
 * Comparação de indicadores entre as regiões do Brasil.
 * Identificação de tendências de crescimento do serviço.
 
 ### 3. Desenvolvimento do Dashboard
-**Responsáveis:** Jonatas e Ruan Pereira
 * Criação de mapas de calor e gráficos de desempenho por UF.
 * Implementação de filtros por região de saúde.
-
 
 
 ## 🚀 Tecnologias Utilizadas
