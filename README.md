@@ -1,10 +1,11 @@
-# Grupo-39-PI
-# 📊 Projeto de Análise de Dados: Impacto da COVID-19 no Brasil
+# 🚑 Projeto de Análise de Dados: Eficiência e Cobertura do SAMU 192
 
-Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low Code em Ciência de Dados** do curso de Análise e Desenvolvimento de Sistemas (Senac EAD). O objetivo é realizar o processo completo de ETL (Extração, Transformação e Carga) e criar um dashboard interativo para visualização dos impactos da pandemia no território nacional.
+Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low Code em Ciência de Dados** do curso de Análise e Desenvolvimento de Sistemas (Senac EAD). O foco desta análise é transformar dados brutos do Serviço de Atendimento Móvel de Urgência (SAMU) em indicadores visuais inteligentes.
 
+---
 
 ## 👥 Integrantes do Grupo
+
 * **João Marcos Ribeiro**
 * **Cecília Luiza de Moraes da Rosa**
 * **Victor Hugo Silva Reis**
@@ -14,54 +15,57 @@ Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low C
 * **Ruan Pereira**
 
 
-## 📌 Tema e Contexto
-Análise detalhada da evolução temporal, distribuição geográfica e taxas de letalidade da COVID-19 no Brasil. O projeto visa transformar dados brutos governamentais em insights visuais que facilitem a compreensão da crise sanitária.
+
+## 📌 Relevância Social
+O SAMU 192 é um componente fundamental da Rede de Atenção às Urgências no Brasil. Analisar seus indicadores de desempenho é vital para identificar gargalos no atendimento público, avaliar a cobertura regional e propor melhorias que podem, em última instância, salvar mais vidas através da otimização do tempo de resposta.
 
 
 ## 🎯 Objetivos da Análise
-* Identificar os estados com maior volume de casos e óbitos.
-* Analisar os períodos de pico (ondas) da pandemia.
-* Calcular e monitorar a taxa de mortalidade em tempo real.
-* Proporcionar uma ferramenta interativa para comparação entre diferentes regiões e períodos.
+* Avaliar o percentual de cobertura do SAMU por região e estado.
+* Identificar municípios com indicadores de desempenho abaixo da média nacional.
+* Monitorar a evolução dos atendimentos ao longo do tempo.
+* Criar um dashboard interativo que facilite a visualização da eficiência do serviço para gestores públicos.
+
 
 
 ## 🗂 Base de Dados
-Utilizamos registros oficiais de casos e mortes por COVID-19 no Brasil.
-* **Fonte sugerida:** [Brasil.io](https://brasil.io/dataset/covid19/caso_full/) ou Painel Coronavírus (Ministério da Saúde).
-* **Dados principais:** Datas, Estados (UF), Casos Confirmados, Óbitos Acumulados e População Estimada.
+Os dados foram extraídos do **Portal de Dados Abertos do Ministério da Saúde**.
+* **Arquivo utilizado:** `samuppc.csv`
+* **Principais colunas:** Município, UF, Região, Indicador Calculado e Data de Competência.
+
 
 
 ## 🛠 Estrutura do Repositório
-Seguindo as diretrizes da disciplina, o projeto está organizado da seguinte forma:
+Conforme as diretrizes da disciplina, o projeto está organizado da seguinte forma:
 
-* 📂 **/data**: Contém os arquivos de dados brutos (`base_original.csv`) e os dados após o tratamento (`base_tratada.csv`).
-* 📂 **/src**: Contém os scripts Python responsáveis pelo processo de limpeza e transformação (ETL).
-* 📂 **/app**: Contém o código-fonte do dashboard interativo desenvolvido em Streamlit.
+* 📂 **/data**: Contém a base de dados original (`samuppc.csv`) e futuramente a base tratada.
+* 📂 **/src**: Contém o script `etl.py` para limpeza e transformação dos dados.
+* 📂 **/app**: Contém o arquivo `dashboard.py` para a interface visual em Streamlit.
+
 
 
 ## 🔄 Planejamento de Tarefas
 
 ### 1. Tratamento e Limpeza (ETL)
-**Responsáveis:** João Marcos e Cecília Rosa
-* Padronização de formatos de data.
-* Tratamento de valores nulos e inconsistentes.
-* Criação de métricas (Taxa de Mortalidade = Óbitos / Casos).
+**Responsáveis:** João Marcos e Cecília
+* Filtragem de dados por competência (ano/mês).
+* Padronização de nomes de municípios e estados.
 
 ### 2. Análise Exploratória
-**Responsáveis:** Victor Hugo Reis e Fernando Marques
-* Identificação de padrões sazonais.
-* Ranking de criticidade por estado.
+**Responsáveis:** Victor Hugo e Fernando
+* Comparação de indicadores entre as regiões do Brasil.
+* Identificação de tendências de crescimento do serviço.
 
 ### 3. Desenvolvimento do Dashboard
-**Responsáveis:** Jonatas Viana, Victor Hugo Andrade e Ruan Pereira
-* Criação de visualizações (Linhas, Barras e KPIs).
-* Implementação de filtros de usuário (UF e Data).
+**Responsáveis:** Jonatas e Ruan Pereira
+* Criação de mapas de calor e gráficos de desempenho por UF.
+* Implementação de filtros por região de saúde.
+
 
 
 ## 🚀 Tecnologias Utilizadas
-* **Python**: Linguagem base.
-* **Pandas**: Manipulação e tratamento de dados.
-* **Streamlit**: Framework para criação do dashboard interativo.
-* **GitHub**: Controle de versão e documentação.
+* **Python / Pandas**: Processamento de dados.
+* **Streamlit**: Criação da aplicação visual (Low Code).
+* **GitHub**: Gestão de código e documentação.
 
 
