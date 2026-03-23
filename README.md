@@ -1,6 +1,6 @@
-# 🚑 Projeto de Análise de Dados: Eficiência e Cobertura do SAMU 192
+# 🚑 Projeto Integrador: eficiência e cobertura do SAMU 192
 
-Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low Code em Ciência de Dados** do curso de Análise e Desenvolvimento de Sistemas (Senac EAD). O foco desta análise é transformar dados brutos do Serviço de Atendimento Móvel de Urgência (SAMU) em indicadores visuais inteligentes.
+Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low Code em Ciência de Dados** do curso de Análise e Desenvolvimento de Sistemas (Senac EAD). O foco desta análise é transformar dados brutos do Serviço de Atendimento Móvel de Urgência (SAMU).
 
 ---
 
