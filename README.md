@@ -4,7 +4,7 @@ Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low C
 
 ---
 
-## 👥 Integrantes do Grupo
+## 👥 Integrantes do grupo
 
 * **João Marcos Ribeiro**
 * **Cecília Luiza de Moraes da Rosa**
@@ -16,11 +16,11 @@ Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low C
 
 
 
-## 📌 Relevância Social
+## 📌 Relevância social
 O SAMU 192 é um componente fundamental da Rede de Atenção às Urgências no Brasil. Analisar seus indicadores de desempenho é vital para identificar gargalos no atendimento público, avaliar a cobertura regional e propor melhorias que podem, em última instância, salvar mais vidas através da otimização do tempo de resposta.
 
 
-## 🎯 Objetivos da Análise
+## 🎯 Objetivos da análise
 * Avaliar o percentual de cobertura do SAMU por região e estado.
 * Identificar municípios com indicadores de desempenho abaixo da média nacional.
 * Monitorar a evolução dos atendimentos ao longo do tempo.
@@ -28,14 +28,14 @@ O SAMU 192 é um componente fundamental da Rede de Atenção às Urgências no B
 
 
 
-## 🗂 Base de Dados
-Os dados foram extraídos do **Portal de Dados Abertos do Ministério da Saúde**.
+## 🗂 Base de dados
+Os dados foram extraídos do **Portal de dados abertos do Ministério da Saúde**.
 * **Arquivo utilizado:** `samuppc.csv`
 * **Principais colunas:** Município, UF, Região, Indicador Calculado e Data de Competência.
 
 
 
-## 🛠 Estrutura do Repositório
+## 🛠 Estrutura do repositório
 Conforme as diretrizes da disciplina, o projeto está organizado da seguinte forma:
 
 * 📂 **/data**: Contém a base de dados original (`samuppc.csv`) e futuramente a base tratada.
@@ -44,22 +44,25 @@ Conforme as diretrizes da disciplina, o projeto está organizado da seguinte for
 
 
 
-## 🔄 Planejamento de Tarefas
+## 🔄 Planejamento de tarefas
 
-### 1. Tratamento e Limpeza (ETL)
+### 1. Tratamento e limpeza (ETL)
+* Responsáveis: Cecília Rosa e João Marcos
 * Filtragem de dados por competência (ano/mês).
 * Padronização de nomes de municípios e estados.
 
-### 2. Análise Exploratória
+### 2. Análise exploratória
+* Responsáveis: Victor Hugo Reis e Victor Hugo Andrade
 * Comparação de indicadores entre as regiões do Brasil.
 * Identificação de tendências de crescimento do serviço.
 
-### 3. Desenvolvimento do Dashboard
+### 3. Desenvolvimento do dashboard
+* Responsáveis: Fernando Marques, Jonatas Rodrigues e Ruan Pereira
 * Criação de mapas de calor e gráficos de desempenho por UF.
 * Implementação de filtros por região de saúde.
 
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias utilizadas
 * **Python / Pandas**: Processamento de dados.
 * **Streamlit**: Criação da aplicação visual (Low Code).
 * **GitHub**: Gestão de código e documentação.
