@@ -101,10 +101,6 @@ df_total = carregar_dados()
 # ─────────────────────────────────────────────
 # 3. BARRA LATERAL – FILTROS
 # ─────────────────────────────────────────────
-st.sidebar.image(
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SAMU_logo.svg/320px-SAMU_logo.svg.png",
-    width=100,
-)
 st.sidebar.title("🚑 SAMU 192")
 st.sidebar.markdown("---")
 
