@@ -1,6 +1,6 @@
 ## 🚀 Acesse o painel
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://senac-grupo-39-pi.streamlit.app)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://senac-grupo-39-pi.streamlit.app)
 
 # 🚑 Projeto Integrador: eficiência e cobertura do SAMU 192
 
