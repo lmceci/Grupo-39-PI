@@ -24,7 +24,7 @@ st.markdown("""
 
     /* Cartões de KPI */
     [data-testid="metric-container"] {
-        background: #f8fafd;
+        background: #010e21;
         border: 1px solid #e0e7ef;
         border-radius: 12px;
         padding: 18px 22px;
