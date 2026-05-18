@@ -1,3 +1,7 @@
+## 🚀 Acesse o painel
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://senac-grupo-39-pi.streamlit.app)
+
 # 🚑 Projeto Integrador: eficiência e cobertura do SAMU 192
 
 Este projeto faz parte da disciplina **Projeto Integrador: Desenvolvimento Low Code em Ciência de Dados** do curso de Análise e Desenvolvimento de Sistemas (Senac EAD). O foco desta análise é transformar dados brutos do Serviço de Atendimento Móvel de Urgência (SAMU).
