@@ -31,7 +31,7 @@ st.markdown("""
         box-shadow: 0 2px 8px rgba(0,51,102,0.06);
     }
     [data-testid="metric-container"] label { color: #5a6a7e; font-size: 13px; font-weight: 600; }
-    [data-testid="metric-container"] [data-testid="metric-value"] { color: #003366; font-size: 28px; font-weight: 700; }
+    [data-testid="metric-container"] [data-testid="metric-value"] { color: #ffffff; font-size: 28px; font-weight: 700; }
 
     /* Sidebar */
     section[data-testid="stSidebar"] { background: #003366; }
