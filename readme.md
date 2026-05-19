@@ -1,4 +1,4 @@
-## 🚀 Acesse o painel (use o light mode)
+## 🚀 Acesse o painel
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://senac-grupo-39-pi.streamlit.app)
 
