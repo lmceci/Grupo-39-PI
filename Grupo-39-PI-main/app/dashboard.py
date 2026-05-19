@@ -120,9 +120,18 @@ st.markdown("""
     }
     .info-box b { color: #ffffff !important; }
 
-    /* Esconde botão de colapsar sidebar */
-    [data-testid="collapsedControl"] { display: none !important; }
-    button[kind="header"] { display: none !important; }
+    /* Dropdowns da sidebar */
+    [data-baseweb="popover"] { background-color: #1a2a4a !important; }
+    [data-baseweb="menu"] { background-color: #1a2a4a !important; }
+    [data-baseweb="option"] { background-color: #1a2a4a !important; color: #ffffff !important; }
+    [data-baseweb="option"]:hover { background-color: #e63946 !important; }
+    [data-baseweb="select"] * { color: #ffffff !important; }
+    [data-baseweb="input"] * { color: #ffffff !important; }
+    li[role="option"] { color: #ffffff !important; background-color: #1a2a4a !important; }
+    li[role="option"]:hover { background-color: #e63946 !important; }
+
+    /* Fixa a sidebar — esconde botão de colapsar */
+    [data-testid="stSidebarCollapseButton"] { display: none !important; }
 
     /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
@@ -262,12 +271,12 @@ with col_uf:
         marker_line_width=0,
         text=ranking_uf["vl_indicador_calculado_mun"].map(lambda v: f"{v:.1f}%"),
         textposition="outside",
-        textfont=dict(family=FONT, size=11, color=COR_PRINCIPAL),
+        textfont=dict(family=FONT, size=11, color="#ffffff"),
         hovertemplate="<b>%{y}</b><br>Cobertura média: %{x:.1f}%<extra></extra>",
     ))
     fig_uf.add_vline(x=100, line_dash="dot", line_color=COR_PRINCIPAL, line_width=2,
                      annotation_text="Meta 100%", annotation_position="top right",
-                     annotation_font=dict(family=FONT, color=COR_PRINCIPAL, size=11))
+                     annotation_font=dict(family=FONT, color="#ffffff", size=11))
     fig_uf.update_layout(
         height=max(440, len(ranking_uf) * 28),
         margin=dict(l=0, r=70, t=10, b=0),
@@ -275,9 +284,9 @@ with col_uf:
         yaxis_title="",
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
-        xaxis=dict(gridcolor=COR_GRADE, tickfont=dict(family=FONT)),
-        yaxis=dict(tickfont=dict(family=FONT, size=12)),
-        font=dict(family=FONT),
+        xaxis=dict(gridcolor="#2a2a2a", tickfont=dict(family=FONT, color="#ffffff")),
+        yaxis=dict(tickfont=dict(family=FONT, size=12, color="#ffffff")),
+        font=dict(family=FONT, color="#ffffff"),
         bargap=0.3,
     )
     st.plotly_chart(fig_uf, use_container_width=True)
@@ -309,9 +318,9 @@ with col_reg:
         yaxis_title="",
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
-        xaxis=dict(gridcolor=COR_GRADE, tickfont=dict(family=FONT)),
-        yaxis=dict(tickfont=dict(family=FONT, size=11)),
-        font=dict(family=FONT),
+        xaxis=dict(gridcolor="#2a2a2a", tickfont=dict(family=FONT, color="#ffffff")),
+        yaxis=dict(tickfont=dict(family=FONT, size=11, color="#ffffff")),
+        font=dict(family=FONT, color="#ffffff"),
         bargap=0.35,
     )
     st.plotly_chart(fig_reg, use_container_width=True)
@@ -335,8 +344,10 @@ with col_reg:
         height=260,
         margin=dict(l=0, r=0, t=10, b=0),
         showlegend=True,
-        legend=dict(orientation="h", y=-0.15, font=dict(family=FONT, size=11)),
-        font=dict(family=FONT),
+        legend=dict(orientation="h", y=-0.15, font=dict(family=FONT, size=11, color="#ffffff")),
+        font=dict(family=FONT, color="#ffffff"),
+        plot_bgcolor="rgba(0,0,0,0)",
+        paper_bgcolor="rgba(0,0,0,0)",
     )
     st.plotly_chart(fig_pizza, use_container_width=True)
 
@@ -362,7 +373,7 @@ fig_evo.add_trace(go.Scatter(
     mode="lines+markers+text",
     text=evolucao["Cobertura Média (%)"].map(lambda v: f"{v:.1f}%"),
     textposition="top center",
-    textfont=dict(family=FONT, size=12, color=COR_PRINCIPAL),
+    textfont=dict(family=FONT, size=12, color="#ffffff"),
     line=dict(color=COR_PRINCIPAL, width=3, shape="spline"),
     marker=dict(size=11, color=COR_ACENTO, line=dict(color="#ffffff", width=2)),
     fill="tozeroy",
@@ -381,9 +392,9 @@ fig_evo.update_layout(
     xaxis_title="Ano",
     plot_bgcolor="rgba(0,0,0,0)",
     paper_bgcolor="rgba(0,0,0,0)",
-    yaxis=dict(gridcolor=COR_GRADE, tickfont=dict(family=FONT)),
-    xaxis=dict(gridcolor=COR_GRADE, tickfont=dict(family=FONT, size=12)),
-    font=dict(family=FONT),
+    yaxis=dict(gridcolor="#2a2a2a", tickfont=dict(family=FONT, color="#ffffff")),
+    xaxis=dict(gridcolor="#2a2a2a", tickfont=dict(family=FONT, size=12, color="#ffffff")),
+    font=dict(family=FONT, color="#ffffff"),
 )
 st.plotly_chart(fig_evo, use_container_width=True)
 
