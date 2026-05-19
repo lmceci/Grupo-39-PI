@@ -23,12 +23,9 @@ st.markdown("""
         font-family: 'Montserrat', sans-serif !important;
     }
 
-    /* Fundo principal */
-    .stApp { background-color: #f4f6fb; }
-
-    /* Sidebar escura e elegante */
+    /* Sidebar escura e elegante — sempre azul independente do tema */
     section[data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #001f4d 0%, #003380 100%);
+        background: linear-gradient(180deg, #001f4d 0%, #003380 100%) !important;
         border-right: 1px solid #1a4d99;
     }
     section[data-testid="stSidebar"] * { color: #ddeeff !important; font-family: 'Montserrat', sans-serif !important; }
@@ -43,17 +40,22 @@ st.markdown("""
         color: #ffffff !important;
     }
 
-    /* KPI cards */
+    /* Fundo escuro geral */
+    .stApp { background-color: #0d1117 !important; }
+    .stApp > div { background-color: #0d1117 !important; }
+    section[data-testid="stMain"] { background-color: #0d1117 !important; }
+
+    /* KPI cards — tema escuro fixo */
     [data-testid="metric-container"] {
-        background: #ffffff;
+        background: #161b22 !important;
         border: none;
         border-radius: 16px;
         padding: 20px 24px;
-        box-shadow: 0 4px 20px rgba(0, 51, 128, 0.08);
-        border-top: 4px solid #003366;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        border-top: 4px solid #e63946;
     }
     [data-testid="metric-container"] label {
-        color: #7a8fa6 !important;
+        color: #8b9ab0 !important;
         font-size: 12px !important;
         font-weight: 700 !important;
         letter-spacing: 1.2px;
@@ -61,15 +63,19 @@ st.markdown("""
         font-family: 'Montserrat', sans-serif !important;
     }
     [data-testid="metric-container"] [data-testid="metric-value"] {
-        color: #001f4d !important;
+        color: #ffffff !important;
         font-size: 32px !important;
         font-weight: 800 !important;
         font-family: 'Montserrat', sans-serif !important;
     }
+    [data-testid="metric-container"] [data-testid="metric-delta"] {
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 600 !important;
+    }
 
     /* Títulos h3 */
     h3 {
-        color: #001f4d !important;
+        color: #ffffff !important;
         font-weight: 800 !important;
         font-size: 18px !important;
         letter-spacing: 0.5px;
@@ -81,20 +87,23 @@ st.markdown("""
     /* Título principal */
     h1 {
         font-weight: 800 !important;
-        color: #001f4d !important;
+        color: #ffffff !important;
         letter-spacing: -0.5px;
     }
 
-    /* Divisor */
-    hr { border-top: 1px solid #dce3ef; margin: 10px 0; }
+    /* Texto geral */
+    p, span, div, label { color: #c9d1d9 !important; }
 
-    /* Info box */
+    /* Divisor */
+    hr { border-top: 1px solid rgba(128,128,128,0.2); margin: 10px 0; }
+
+    /* Info box — sempre escura, texto sempre claro */
     .info-box {
         background: linear-gradient(135deg, #001f4d 0%, #003380 100%);
         border-radius: 16px;
         padding: 24px 28px;
         margin-bottom: 28px;
-        box-shadow: 0 8px 32px rgba(0, 31, 77, 0.18);
+        box-shadow: 0 8px 32px rgba(0, 31, 77, 0.25);
     }
     .info-box h4 {
         margin: 0 0 8px 0;
@@ -111,9 +120,12 @@ st.markdown("""
     }
     .info-box b { color: #ffffff !important; }
 
+    /* Esconde botão de colapsar sidebar */
+    [data-testid="collapsedControl"] { display: none !important; }
+    button[kind="header"] { display: none !important; }
+
     /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f0f4fa; }
     ::-webkit-scrollbar-thumb { background: #003366; border-radius: 10px; }
 </style>
 """, unsafe_allow_html=True)
